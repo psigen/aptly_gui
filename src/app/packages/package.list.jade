@@ -1,0 +1,10 @@
+.container
+  div
+    acme-navbar(creation-date="main.creationDate")
+  
+  .row
+    .col-sm-6.col-md-4(ng-repeat="package in packages.packages | orderBy:'date'")
+      h3 {{ awesomeThing.title }}
+      p {{ awesomeThing.description }}
+      p
+        a(ng-href="{{ awesomeThing.url }}") {{ awesomeThing.url }}

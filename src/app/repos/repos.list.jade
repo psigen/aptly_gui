@@ -1,0 +1,10 @@
+.container
+  div
+    acme-navbar(creation-date="main.creationDate")
+  
+  .row
+    .col-sm-6.col-md-4(ng-repeat="repos in repos.repos | orderBy:'date'")
+      h3 {{ repos.title }}
+      p {{ repos.description }}
+      p
+        a(ng-href="{{ repos.url }}") {{ repos.url }}
